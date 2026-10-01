@@ -2,12 +2,13 @@
 
 #include "script/actions/SAction.h"
 
-class SAction_Job_Stop : public SAction {
+class SAction_EnablePursueFromTraffic : public SAction {
 public:
     const char* GetName() const override;
     void GetInputs(SCmdParams& params) const override;
     void GetOutputs(SCmdParams& params) const override;
     ActionState Exec(ScriptContext& context) override;
+
 public:
-    bool m_InputVariant;
+    uint32_t m_InputVariant;
 };
